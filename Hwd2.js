@@ -17,10 +17,10 @@ products.forEach((product, index) => {
   console.log(`${index + 1}. ${product.name} - ${product.price}`);
 });
 //Tìm kiếm sản phẩm theo tên
-const searchProduct = products.find((x) => x.name === "Laptop");
-if (searchProduct) {
+const searchproduct = products.find((x) => x.name === "Laptop");
+if (searchproduct) {
   console.log(
-    `Sản phẩm tìm thấy: ${searchProduct.name} - ${searchProduct.price}`,
+    `Sản phẩm tìm thấy: ${searchproduct.name} - ${searchproduct.price}`,
   );
 } else {
   console.log("Không tìm thấy sản phẩm.");
