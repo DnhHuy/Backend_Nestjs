@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service.js';
 import type { CreateBookDto } from './createBook.dto.js';
+import type { CreateAuthorDto } from './createAuthor.dto.js';
 
 @Controller('books')
 export class AppController {
@@ -19,6 +20,11 @@ export class AppController {
   @Get('id')
   findOne(@Body() id: number): CreateBookDto | undefined {
     return this.appService.getBookById(id);
+  }
+
+  @Get('id_tg')
+  findBooksByAuthorId(@Body() id_tg: number): CreateBookDto[] {
+    return this.appService.getBooksByAuthorId(id_tg);
   }
 
   @Get('update')
